@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <!-- Encabezado de la página -->
+    <header>
+      <!-- Barra de navegación -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="obras.html">Nuestras Obras</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+      <!-- Formulario de contacto -->
+      <form id="contact-form" action="#" method="post">
+        <h2>Contacto</h2>
+        <!-- Campo para el nombre y apellidos -->
+        <div class="form-group">
+          <label for="nombre">Nombre y Apellidos:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <!-- Campo para el teléfono -->
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+        </div>
+        <!-- Campo para el email -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <!-- Campo para la localidad -->
+        <div class="form-group">
+          <label for="localidad">Localidad:</label>
+          <input type="text" id="localidad" name="localidad" required />
+        </div>
+        <!-- Campo para la provincia -->
+        <div class="form-group">
+          <label for="provincia">Provincia:</label>
+          <input type="text" id="provincia" name="provincia" required />
+        </div>
+        <!-- Campo para el asunto -->
+        <div class="form-group">
+          <label for="asunto">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" required />
+        </div>
+        <!-- Campo para el comentario -->
+        <div class="form-group">
+          <label for="comentario">Comentario:</label>
+          <textarea
+            id="comentario"
+            name="comentario"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <!-- Botón de envío del formulario -->
+        <button type="submit">Enviar</button>
+        <!-- Respuesta del formulario en javaScript -->
+        <h3 id="respuesta"></h3>
+      </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+      <!-- Información de contacto -->
+      <div class="contacto">
+        <h2>Contacto</h2>
+        <a href="https://www.gmail.com"><p>Email: contacto@miempresa.com</p></a>
+        <p>Teléfono: +123456789</p>
+      </div>
+      <!-- Información de protección de datos -->
+      <div class="proteccion">
+        <h2>Protección de Datos</h2>
+        <p>Todos los derechos reservados &copy; 2023</p>
+      </div>
+      <!-- Enlaces a redes sociales -->
+      <div class="redes-sociales">
+        <h2>Redes Sociales</h2>
+        <a href="https://es-es.facebook.com/"
+          ><img src="img/facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://twitter.com"
+          ><img src="img/twitter.png" alt="Twitter"
+        /></a>
+        <a href="https://www.instagram.com#"
+          ><img src="img/instagram.png" alt="Instagram"
+        /></a>
+      </div>
+    </footer>
+    <!-- Script JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

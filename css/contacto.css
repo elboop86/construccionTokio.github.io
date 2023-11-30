@@ -1,0 +1,190 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto para todo el cuerpo del documento */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh; /* Establece una altura mínima para la página (100% del viewport height) */
+}
+
+.container {
+    display: flex; /* Establece un contenedor de tipo flexbox */
+    flex-direction: column; /* Los elementos dentro del contenedor se apilan verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos del contenedor */
+    width: 50%; /* Ocupa el 50% del ancho de la página */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno del contenedor */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del contenedor */
+}
+
+h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centra el contenido del nav */
+    padding: 10px 0; /* Espaciado en la parte superior e inferior */
+    size: 10px; /* (Nota: no es una propiedad válida en CSS) */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Los elementos de lista se muestran en línea (uno al lado del otro) */
+    margin-right: 20px; /* Espacio a la derecha de los elementos de lista */
+}
+
+nav a {
+    text-decoration: none; /* Elimina la decoración de texto subrayado en los enlaces */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los elementos del formulario */
+.form-group {
+    margin-bottom: 20px; /* Espacio entre grupos de campos del formulario */
+}
+
+label {
+    display: block; /* Hace que las etiquetas de formulario ocupen una línea completa */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno de los campos de entrada */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente el campo de texto */
+}
+
+button {
+    background-color: #007bff; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0; /* Espaciado en la parte superior e inferior del footer */
+    display: flex; /* Establece un contenedor de tipo flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye uniformemente los elementos en el espacio disponible */
+}
+
+/* Estilos para las secciones del footer */
+.contacto, .proteccion, .redes-sociales {
+    flex: 1; /* Los elementos ocupan un tercio del espacio disponible en el footer */
+    margin: 10px; /* Espaciado entre las secciones del footer */
+    text-align: center; /* Centra el contenido de las secciones */
+}
+
+/* Estilos para los enlaces de las redes sociales en el footer */
+.redes-sociales a {
+    display: inline-block; /* Los enlaces se muestran en línea (uno al lado del otro) */
+    margin: 5px; /* Espacio entre los enlaces */
+}
+
+/* Estilos para las imágenes de las redes sociales en el footer */
+.redes-sociales img {
+    width: 32px; /* Ancho de las imágenes */
+    height: 32px; /* Altura de las imágenes */
+}
+
+/* Media Queries responsivos */
+/* Estilos para pantallas mayores o iguales a 1200px */
+@media (min-width: 1200px) {
+    nav {
+        width: 100%; /* Ancho completo para la barra de navegación */
+    }
+   
+    footer {
+        width: 100%; /* Ancho completo para el footer */
+    }
+    .container {
+        width: auto; /* Ancho automático para el contenedor principal */
+    }
+}
+
+/* Estilos para pantallas mayores o iguales a 800px */
+@media (min-width: 800px) and (max-width: 1199px) {
+    nav{
+        width: auto; /* Ancho automático para la barra de navegación */
+    }
+    
+    footer {
+        width: 100%; /* Ancho completo para el footer */
+    }
+    .container {
+        width: auto; /* Ancho automático para el contenedor principal */
+    }
+}
+
+
+/* Estilos para pantallas mayores o iguales a 600px y menores a 800px */
+@media (min-width: 600px) and (max-width: 799px) {
+    
+    
+    
+    footer {
+        width: 100%;
+    }
+
+    nav {
+        width: auto;
+    }
+    .container {
+        width: auto;
+    }
+    
+}
+
+/* Estilos para pantallas menores a 600px (móviles) */
+@media (max-width: 599px) {
+    
+    
+    /* Oculta el footer en pantallas de 600px */
+    footer {
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .container {
+        width: auto;
+    }
+
+    
+}

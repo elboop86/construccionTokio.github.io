@@ -1,0 +1,134 @@
+<!--Presentación proyecto
+
+Tema: Presentación de ConstruccionTokio
+
+Fecha: 19 de octubre de 2023
+
+Presentador: Javier Medina Cabrerizo
+
+Construcción Tokio
+
+1.Aviso de cookies
+2.Validación de formularios
+3.Galería de imágenes
+
+
+1. Aviso de cookies
+
+ Para que el usuario pueda elegir si quiere solo las necesarias o todo tipo de cookie,
+ necesitamos añadir un selector de opciones al aviso.
+
+Para ello, podemos utilizar el siguiente código HTML:-->>
+<div id="aviso-cookies">
+  <p>
+    Este sitio web utiliza cookies para mejorar su experiencia. Al continuar
+    navegando, usted acepta su uso.
+  </p>
+  <input type="radio" name="cookies" value="necesarias" />
+  <label for="necesarias">Solo cookies necesarias</label>
+  <input type="radio" name="cookies" value="todas" />
+  <label for="todas">Todas las cookies</label>
+</div>
+<!--Este código creará un selector de opciones con dos opciones: "Solo cookies necesarias" y "Todas las cookies". El usuario podrá seleccionar la opción que desee.
+
+Para que el aviso no vuelva a aparecer durante 1 mes, podemos utilizar la siguiente cookie:
+
+cookie_aceptadas=true;
+
+Esta cookie se creará cuando el usuario acepte el uso de cookies. Se almacenará en el navegador del usuario y se eliminará automáticamente después de 1 mes.
+
+
+
+
+
+
+
+
+
+
+2. Validación de formularios
+
+La validación de formularios que se está utilizando actualmente es por HTML con el atributo required. Para que la validación sea por JavaScript, podemos utilizar el siguiente código:-->
+<script>
+  // Función para validar el formulario
+  function validarFormulario() {
+  // Comprobar que todos los campos obligatorios están rellenos
+  for (const campo of document.querySelectorAll("input[required]")) { // bucle for comprueba que todos estan rellenos
+    if (campo.value === "") { // si el campo esta vacio
+      campo.style.backgroundColor = "red"; //marca en rojo
+      campo.placeholder = "Este campo es obligatorio"; // si esta vacio avisa que es obligatorio
+      return false; // devuelve un false
+    }
+  }
+
+  // Si todos los campos son válidos, devolver true
+  return true;
+}
+
+// Añadir un evento de clic al botón de envío
+document.querySelector("button[type='submit']").addEventListener("click", validarFormulario);
+
+ 
+
+/*Este código recorre todos los campos del formulario y comprueba si son obligatorios. Si un campo es obligatorio y está vacío, se muestra un borde rojo y un mensaje de error.*/
+
+
+
+</script>
+<!---->
+<!--Este código añade un evento de cambio a todos los campos del formulario. Cuando un campo cambia, se comprueba si está vacío. Si está vacío,
+     se muestra el mensaje de error asociado al campo.-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!--3.Galeria Imagenes-->
+
+
+<!--Para que las fotos de la galería se cambien a cada 5 segundos, podemos utilizar el siguiente código JavaScript-->
+<script>
+  // Función para cambiar las imágenes
+
+  function cambiarImagenes() {
+    var contenedor = document.getElementById("galeria");
+    var siguienteImagen = contenedor.children[contadorImagen];
+    contadorImagen++;
+    if (contadorImagen >= contenedor.children.length) {
+      contadorImagen = 0;
+    }
+    siguienteImagen.style.display = "block";
+    contenedor.children[contadorImagen - 1].style.display = "none";
+  }
+
+  // Evento de recarga de la página
+  window.onload = cambiarImagenes;
+
+  // Función para ejecutar la función cada 5 segundos
+
+  setInterval(cambiarImagenes, 5000);
+</script>
+
+<!--CSS--> <!-- Para mejorar la imagen podríamos poner el siguente estilo-->
+
+
+<!--.active {
+  transition: opacity 0.5s;
+  transition: transform 0.5s;
+}
+
+.active img {
+  opacity: 0;
+  transform: translateY(-50px);
+}-->
+
+<!--Este código hará que la imagen activa de la galería se desvanezca y se desplace hacia abajo durante 0,5 segundos-->

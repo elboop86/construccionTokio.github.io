@@ -1,0 +1,159 @@
+ /* Estilos generales del cuerpo de la página */
+body {
+    background-color: burlywood; /* Fondo de color burlywood (marrón claro) */
+    margin: 0%; /* Elimina cualquier margen exterior del cuerpo de la página */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra el contenido del nav horizontalmente */
+    padding: 10px 0; /* Espaciado en la parte superior e inferior */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Los elementos de lista se muestran en línea (uno al lado del otro) */
+    margin-right: 20px; /* Espacio a la derecha de los elementos de lista */
+}
+
+nav a {
+    text-decoration: none; /* Elimina la decoración de texto subrayado en los enlaces */
+    color: #fff; /* Texto blanco */
+    size: 7; /* (Nota: "size" no es una propiedad válida en CSS, probablemente debería ser "font-size") */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+    margin: 10%; /* Márgenes del contenedor principal */
+}
+
+.slider {
+    width: 100%; /* Ancho completo del slider */
+    margin: 3%; /* Márgenes del slider */
+}
+
+h1 {
+    text-align: center; /* Centra el título h1 horizontalmente */
+    color: red; /* Color del texto en rojo */
+}
+
+.articulo {
+    text-align: center; /* Centra el contenido del artículo horizontalmente */
+    justify-content: center; /* Alinea verticalmente el contenido al centro */
+    margin: 10%; /* Márgenes del artículo */
+    color: white; /* Color del texto en blanco */
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    border: 3px solid black; /* Borde de 3px sólido en negro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgb(35, 151, 204); /* Fondo de color azul */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Fondo gris oscuro del footer */
+    color: #fff; /* Texto blanco en el footer */
+    padding: 20px 0; /* Espaciado en la parte superior e inferior del footer */
+    display: flex; /* Establece un contenedor de tipo flexbox para los elementos del footer */
+    flex-wrap: wrap; /* Permite que los elementos del footer se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye uniformemente los elementos en el espacio disponible */
+}
+
+/* Estilos para las secciones del footer */
+.contacto, .proteccion, .redes-sociales {
+    flex: 1; /* Los elementos ocupan un tercio del espacio disponible en el footer */
+    margin: 10px; /* Márgenes entre las secciones del footer */
+    text-align: center; /* Centra el contenido de las secciones del footer */
+}
+
+/* Estilos para los enlaces de las redes sociales en el footer */
+.redes-sociales a {
+    display: inline-block; /* Los enlaces se muestran en línea (uno al lado del otro) */
+    margin: 5px; /* Espacio entre los enlaces */
+}
+
+/* Estilos para las imágenes de las redes sociales en el footer */
+.redes-sociales img {
+    width: 32px; /* Ancho de las imágenes */
+    height: 32px; /* Altura de las imágenes */
+}
+
+/* Media Queries responsivos */
+/* Estilos para pantallas mayores o iguales a 1200px */
+@media (min-width: 1200px) {
+    nav {
+        width: auto; /* Ancho completo de la barra de navegación */
+    }
+    .contenedor {
+        width:auto; /* Ancho completo del contenedor principal */
+    }
+    footer {
+        width: auto; /* Ancho completo del footer */
+    }
+    .slider {
+        width: auto; /* Ancho completo del slider */
+    }
+}
+
+/* Estilos para pantallas mayores o iguales a 800px */
+@media (min-width: 800px) and (max-width: 1199px) {
+    nav {
+        width: auto; /* Ancho automático de la barra de navegación */
+    }
+    .contenedor {
+        width: auto; /* Ancho completo del contenedor principal */
+        margin: auto; /* Márgenes del 25% */
+    }
+    footer {
+        width: auto; /* Ancho completo del footer */
+    }
+    .slider {
+        width: auto; /* Ancho automático del slider */
+        margin: auto; /* Margen automático del slider */
+    }
+}
+
+/* Estilos para pantallas mayores o iguales a 600px y menores a 800px */
+@media (min-width: 600px) and (max-width: 799px) {
+    /* Oculta el footer y slider en pantallas de menos de 799px */
+    footer {
+        display: none;
+    }
+    nav {
+        width: auto; /* Ancho automático de la barra de navegación */
+    }
+    .slider {
+        display: none; /* Oculta el slider en pantallas de menos de 799px */
+    }
+    .contenedor {
+        margin: 20%; /* Márgenes del 20% */
+    }
+}
+
+/* Estilos para pantallas menores a 600px (móviles) */
+@media (max-width: 599px) {
+    /* Oculta el footer en pantallas de 600px o menos */
+    footer {
+        display: none;
+    }
+    nav {
+        width: auto; /* Ancho completo de la barra de navegación */
+    }
+    .contenedor {
+        width: auto; /* Ancho completo del contenedor principal */
+        margin: auto; /* Margen automático del contenedor principal */
+    }
+    .slider {
+        display: none; /* Oculta el slider en pantallas de 599px o menos */
+    }
+}
+
+      

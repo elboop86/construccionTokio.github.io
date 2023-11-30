@@ -1,0 +1,307 @@
+/* Estilos para el fondo del body */
+body {
+    background-color: #eea48c; /* Color de fondo */
+    margin: 0%; /* Margen cero para el body */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Fondo de la barra de navegación */
+    color: #fff; /* Color de texto */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado interno superior e inferior */
+}
+
+nav ul {
+    list-style-type: none; /* Quita los marcadores de lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Mostrar los elementos de lista en línea */
+    margin-right: 20px; /* Margen derecho entre elementos */
+}
+
+nav a {
+    text-decoration: none; /* Quitar subrayado de enlaces */
+    color: #fff; /* Color del texto de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+}
+
+/* Estilos para el contenedor principal */
+.articulo {
+    display: flex; /* Utilizar flexbox para organizar los elementos secundarios */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    flex: 2; /* Asignar 2/3 del ancho del contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+.imagenes {
+    margin-left: 30%; /* Margen izquierdo del contenido de imágenes */
+}
+
+p li ul{
+    text-align: center;
+    
+}
+
+.email {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #083fa5;
+}
+
+h2 {
+    text-align: center;
+    color: #083fa5;
+}
+
+/* Estilos para el aside (publicidad) */
+aside {
+    display: block;
+    margin-left: 30%;
+}
+
+/* Estilos para las secciones */
+.section {
+    margin-bottom: 20px; /* Margen inferior entre secciones */
+}
+
+/* Estilos para las imágenes dentro de las secciones */
+ img {
+    text-align: center;
+    max-width: 100%; /* Ancho máximo para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-top: auto; /* Margen superior automático */
+}
+
+#img {
+    display: none;
+    width: 400px;
+}
+
+.publi1 {
+    width: 473px; /* Ancho específico para la imagen de publicidad 1 */
+    margin-bottom: 0%; /* Margen inferior de 0% para la imagen de publicidad 1 */
+}
+
+
+
+article {
+    text-align: center; /* Centrar el texto del artículo */
+    padding: 3px; /* Espaciado interno del artículo */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    font-size: 20px; /* Tamaño de fuente del artículo */
+}
+
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Fondo del footer */
+    color: #fff; /* Color de texto del footer */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    display: flex; /* Utilizar flexbox para organizar los elementos secundarios del footer */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-around; /* Distribución espaciada de los elementos */
+}
+
+/* Estilos para las secciones del footer */
+.contacto, .proteccion, .redes-sociales {
+    flex: 1; /* Asignar igual cantidad de espacio a los elementos del footer */
+    margin: 10px; /* Margen entre elementos del footer */
+    text-align: center; /* Centrar el texto */
+    color: white;
+}
+
+/* Estilos para los enlaces de las redes sociales */
+.redes-sociales a {
+    
+    display: inline-block; /* Mostrar enlaces en línea */
+    margin: 5px; /* Margen entre enlaces de redes sociales */
+}
+
+/* Estilos para las imágenes de las redes sociales */
+.redes-sociales img {
+    width: 32px; /* Ancho de las imágenes de redes sociales */
+    height: 32px; /* Altura de las imágenes de redes sociales */
+}
+
+/* Media query para pantallas mayores o iguales a 1200px */
+@media (min-width: 1200px) {
+    nav {
+        width: 100%; /* Ancho completo de la barra de navegación */
+    }
+    .contenedor {
+        width: 100%; /* Ancho completo del contenedor principal */
+    }
+    footer {
+        width: 100%; /* Ancho completo del footer */
+    }
+    .slider {
+        width: 100%; /* Ancho completo del slider */
+    }
+}
+
+/* Media query para pantallas mayores o iguales a 800px y menores a 1200px */
+@media (min-width: 800px) and (max-width: 1199px) {
+    nav {
+        width: 100%; /* Ancho completo de la barra de navegación */
+    }
+    .contenedor {
+        width: 100%; /* Ancho completo del contenedor principal */
+        margin: 25%; /* Margen del 25% */
+    }
+    footer {
+        width: 100%; /* Ancho completo del footer */
+    }
+    .slider {
+        width: auto; /* Ancho automático del slider */
+        margin: auto; /* Margen automático del slider */
+    }
+}
+
+/* Media query para pantallas mayores o iguales a 600px y menores a 800px */
+@media (min-width: 600px) and (max-width: 799px) {
+    /* Ocultar el footer y el slider en pantallas de menos de 799px */
+    footer {
+        display: none;
+    }
+    nav {
+        width: 100%; /* Ancho completo de la barra de navegación */
+    }
+    .slider {
+        display: none; /* Ocultar el slider */
+    }
+}
+
+/* Media query para pantallas menores a 600px (móviles) */
+@media (max-width: 599px) {
+    /* Ocultar el footer en pantallas de 600px o menos */
+    footer {
+        display: none;
+    }
+    nav {
+        width: 100%; /* Ancho completo de la barra de navegación */
+    }
+    .contenedor {
+        width: 100%; /* Ancho completo del contenedor principal */
+        margin: 1%; /* Margen del 1% */
+    }
+    .imagenes {
+        width: 100%; /* Ancho completo de las imágenes */
+        margin: 3%; /* Margen del 3% */
+    }
+    .slider {
+        display: none; /* Ocultar el slider */
+    }
+}
+
+/* Media query para dispositivos con un ancho máximo de 800px */
+@media (max-width: 800px) {
+    .container {
+        padding: 10px; /* Espaciado interno del contenedor en pantallas pequeñas */
+    }
+    aside {
+        display: none; /* Ocultar el aside en pantallas pequeñas */
+    }
+}
+
+/* Botón para ocultar el aside en formato desktop */
+#img {
+    display: none; /* Ocultar la sección de imágenes */
+}
+
+/* Aviso de Cookies */
+.aviso-cookies {
+    display: none; /* Mostrar el aviso de cookies por defecto */
+    background: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    width: calc(100% - 40px); /* Ancho calculado para el aviso */
+    max-width: 300px; /* Ancho máximo del aviso */
+    line-height: 150%; /* Altura de línea */
+    border-radius: 10px; /* Borde redondeado */
+    position: fixed; /* Posición fija para que aparezca en la parte inferior */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 20px; /* Distancia desde la izquierda */
+    z-index: 100; /* Índice Z para superponerse a otros elementos */
+    padding-top: 60px; /* Espaciado superior para la imagen de galleta */
+    box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, .25); /* Sombra */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Clase "activo" para mostrar el aviso de cookies */
+.aviso-cookies.activo {
+    display: block;
+}
+
+.aviso-cookies .galleta {
+    max-width: 100px; /* Ancho máximo para la imagen de galleta */
+    position: absolute; /* Posición absoluta para superponer la imagen */
+    top: -25px; /* Posición superior por encima del aviso */
+    left: calc(50% - 50px); /* Centrar horizontalmente la imagen de galleta */
+}
+
+/* Estilos para el título y el párrafo del aviso de cookies */
+.aviso-cookies .titulo,
+.aviso-cookies .parrafo {
+    margin-bottom: 15px; /* Margen inferior entre el título y el párrafo */
+}
+
+/* Estilos para el botón de acuerdo del aviso de cookies */
+.aviso-cookies .boton {
+    width: 100%; /* Ancho completo del botón */
+    background-color: #595959; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    color: #fff; /* Color de texto */
+    font-family: sans-serif; /* Fuente del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 15px 20px; /* Espaciado interno del botón */
+    font-weight: 700; /* Peso de fuente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    transition: .3s ease all; /* Transición suave */
+    border-radius: 5px; /* Borde redondeado */
+    margin-bottom: 15px; /* Margen inferior */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Cambio de color del botón al pasar el mouse */
+.aviso-cookies .boton:hover {
+    background: #333; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el enlace "Aviso de Cookies" del aviso de cookies */
+.aviso-cookies .enlace {
+    color: #4DBFFF; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado del enlace */
+    font-size: 14px; /* Tamaño de fuente del enlace */
+}
+
+/* Cambio de estilo del enlace al pasar el mouse */
+.aviso-cookies .enlace:hover {
+    text-decoration: underline; /* Subrayado del enlace al pasar el mouse */
+}
+
+/* Estilos para el fondo del aviso de cookies */
+.fondo-aviso-cookies {
+    display: none; /* Ocultar el fondo por defecto */
+    background: rgba(0,0,0,.20); /* Fondo semitransparente */
+    position: fixed; /* Posición fija para cubrir toda la pantalla */
+    z-index: 99; /* Índice Z para superponerse a otros elementos */
+    width: 100%; /* Ancho completo */
+    height: 100vh; /* Altura de la pantalla */
+    top: 0; /* Posición superior */
+    left: 0; /* Posición izquierda */
+}
+
+/* Clase "activo" para mostrar el fondo del aviso de cookies */
+.fondo-aviso-cookies.activo {
+    display: block;
+}
